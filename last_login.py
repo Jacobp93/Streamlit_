@@ -7,7 +7,7 @@ import os
 SQL_SERVER = st.secrets["sql"]["server"]
 SQL_DATABASE = st.secrets["sql"]["database"]
 SQL_UID = st.secrets["sql"]["user"]
-SQL_PASS = st.secrets["sql"]["password"]
+#SQL_PASS = st.secrets["sql"]["password"]
 
 # Define the driver and connection string
 driver = '{ODBC Driver 17 for SQL Server}'
@@ -19,7 +19,7 @@ try:
         f'SERVER={SQL_SERVER};'  # Use Streamlit secrets for server
         f'DATABASE={SQL_DATABASE};'  # Use Streamlit secrets for database
         f'UID={SQL_UID};'  # Use Streamlit secrets for user
-        f'PWD={SQL_PASS}'  # Use Streamlit secrets for password
+        #f'PWD={SQL_PASS}'  # Use Streamlit secrets for password
     )
     print("Connection established successfully")
 except db.Error as e:
